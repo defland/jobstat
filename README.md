@@ -6,8 +6,11 @@
 # 技术栈
 
 数据源爬取：Scrapy + Mongodb 
+
 二次数据分析：结巴分词
+
 WEB后端展示：Django + RESTful API + Postgre
+
 WEB前端:Flask + Jinja2渲染 + Redis
 
 部署基于Centos7 + Gunicorn(gevent)。
