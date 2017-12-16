@@ -2,7 +2,7 @@
 import scrapy
 import urllib2,re
 from cprint import cprint 
-from lagou_spider_v1.items import Position_Url_List 
+from xspider.items import Position_Url_List 
 from scrapy.selector import Selector
 
 class GeturlSpider(scrapy.Spider):

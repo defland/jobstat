@@ -5,8 +5,8 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-from lagou_spider_v1.items import Position_Url_List
-from lagou_spider_v1.items import Position_Info
+from xspider.items import Position_Url_List
+from xspider.items import Position_Info
 from openpyxl import Workbook,load_workbook
 
 import pymongo

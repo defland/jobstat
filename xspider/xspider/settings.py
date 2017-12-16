@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for lagou_spider_v1 project
+# Scrapy settings for xspider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'lagou_spider_v1'
+BOT_NAME = 'xspider'
 LOG_LEVEL = 'INFO'
 
-SPIDER_MODULES = ['lagou_spider_v1.spiders']
-NEWSPIDER_MODULE = 'lagou_spider_v1.spiders'
+SPIDER_MODULES = ['xspider.spiders']
+NEWSPIDER_MODULE = 'xspider.spiders'
 
 # 并发数量
 CONCURRENT_REQUESTS = 200
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'lagou_spider_v1 (+http://www.yourdomain.com)'
+#USER_AGENT = 'xspider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -51,7 +51,7 @@ COOKIES_ENABLED = False
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'lagou_spider_v1.middlewares.LagouSpiderV1SpiderMiddleware': 543,
+#    'xspider.middlewares.LagouSpiderV1SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
@@ -60,11 +60,11 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
 
     # 'scrapy.downloadermiddlewares.retry.RetryMiddleware': 500, 
-    'lagou_spider_v1.middlewares.RotateHeadersMiddleware': 543, # 轮转头部
-    # 'lagou_spider_v1.middlewares.DelayDownloadMiddleware': 600,
-    'lagou_spider_v1.middlewares.ProxyMiddleware': 700, # 设置代理IP信息
+    'xspider.middlewares.RotateHeadersMiddleware': 543, # 轮转头部
+    # 'xspider.middlewares.DelayDownloadMiddleware': 600,
+    'xspider.middlewares.ProxyMiddleware': 700, # 设置代理IP信息
     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 710, # 启用代理访问
-    # 'lagou_spider_v1.middlewares.ReDownloadMiddleware': 1000, # 下载重试
+    # 'xspider.middlewares.ReDownloadMiddleware': 1000, # 下载重试
 
 
 }
@@ -94,8 +94,8 @@ RETRY_HTTP_CODES =[500, 502, 503, 504, 400, 408,404]
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'lagou_spider_v1.pipelines.PositionPipeline': 1,
-   'lagou_spider_v1.pipelines.DbPipeline': 2
+   'xspider.pipelines.PositionPipeline': 1,
+   # 'xspider.pipelines.DbPipeline': 2
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

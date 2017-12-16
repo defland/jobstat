@@ -7,8 +7,8 @@
 
 from scrapy import signals
 import random,time
-from lagou_spider_v1.spiders.getposition import GetpositionSpider
-from lagou_spider_v1.spiders.geturl import GeturlSpider
+from xspider.spiders.getposition import GetpositionSpider
+from xspider.spiders.geturl import GeturlSpider
 import json,urllib2,re
 
 import ippool
