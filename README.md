@@ -1,11 +1,19 @@
-# YJobsCrawler
+# jobstat
 
-基Scrapy + MongoDB + 代理IP池 求职岗位定向爬虫。
+之前学习scrapy写了一个lagou的爬虫，做到了可爬取任意岗位的全国所有岗位数据。最近在学习web开发，正好借机会实践一波，利用django+scrapy，把抓取到的数据进行可视化分析，做统计数据的WEB展示。
+
+
+# 技术栈
+
+数据源爬取：Scrapy + Mongodb 
+二次数据分析：结巴分词
+WEB后端展示：Django + RESTful API + Postgre
+WEB前端:Flask + Jinja2渲染 + Redis
+
+部署基于Centos7 + Gunicorn(gevent)。
 
 
 # 实现需求
 
-- 定向爬取lagou.com的职位信息，任意关键字的所有岗位信息。如全国地区Python工程师。
-- 爬取到的数据可以导出为excel/或者存入Mongodb中。
-- 实现request header user-agent轮转。
-- 利用FreeIPAgentPool.py，获取一个免费可用的IP代理池，100个request可以轮转xx个免费IP访问，避免单个IP频繁访问被和谐。
+
+
