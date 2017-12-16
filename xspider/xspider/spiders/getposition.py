@@ -2,7 +2,7 @@
 import scrapy
 import random
 from scrapy.selector import Selector
-from lagou_spider_v1.items import Position_Info
+from xspider.items import Position_Info
 from cprint import cprint 
 import re
 import time
