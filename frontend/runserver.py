@@ -1,6 +1,6 @@
 # !/usr/bin/python
 # coding:utf-8
-from application import create_app
+from application import app
 
 
 if __name__=='__main__':
